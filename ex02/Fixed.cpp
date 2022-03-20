@@ -1,6 +1,6 @@
 #include "Fixed.h"
 
-Fixed::Fixed( void ):fixedPoint(0), fractionalBits(8) {
+Fixed::Fixed( void ):fractionalBits(8), fixedPoint(0) {
 	std::cout << "Default constructor called\n";
 //	fixedPoint = 0;
 //	fractionalBits = 8;

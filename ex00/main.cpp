@@ -12,6 +12,5 @@ int main(void) {
 	std::cout << b.getRawBits() << std::endl;
 	b = a;
 	std::cout << b.getRawBits() << std::endl;
-	std::cin >> c;
 	return (0);
 }
