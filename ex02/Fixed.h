@@ -15,6 +15,14 @@ public:
 	Fixed(float	raw);
 	Fixed(const Fixed& other);
 	Fixed&	operator=(const Fixed& other);
+	Fixed	operator+(const Fixed& other);
+	Fixed	operator-(const Fixed& other);
+	Fixed	operator*(const Fixed& other);
+	Fixed	operator/(const Fixed& other);
+	Fixed	operator++( int );
+	Fixed	operator++( void );
+	Fixed	operator--( void );
+	Fixed	operator--( int );
 	float	toFloat(void) const;
 	int		toInt(void) const;
 	~Fixed( void );
