@@ -35,16 +35,15 @@ Fixed	Fixed::operator+(const Fixed& other){
 }
 
 Fixed	Fixed::operator-(const Fixed& other){
-	Fixed temp(*this);
-
-	temp.fixedPoint -= other.fixedPoint;
-	return (temp);
+	fixedPoint -= other.fixedPoint;
+	return (*this);
 }
 
 Fixed	Fixed::operator*(const Fixed& other){
 	Fixed	res;
 
 	res.fixedPoint = (fixedPoint * other.fixedPoint) / (1 << fractionalBits);
+	//fixedPoint = (fixedPoint * other.fixedPoint) / (1 << fractionalBits);
 	return (res);
 }
 
@@ -56,6 +55,7 @@ Fixed	Fixed::operator/(const Fixed& other){
 }
 
 Fixed::Fixed(const Fixed& other):fractionalBits(8) {
+	//std::cout << "Copy constructor called\n";
 	*this = other;
 }
 
